@@ -1,0 +1,1127 @@
+<!-- // <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>Timi</title>
+<!-- Path to Framework7 Library CSS-->
+<link rel="stylesheet" href="css/framework7.ios.min.css">
+<link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+<!-- Tinder  -->
+<link rel="stylesheet" href="css/jTinder.css?n=1">
+<!-- Slider plugin -->
+<link rel="stylesheet" href="css/rangeslider.css">
+<!-- Icon plugin -->
+<link rel="stylesheet" href="css/font-awesome-4.6.1/css/font-awesome.css">
+<!-- Font -->
+<link rel="stylesheet" href="css/google-font.css?n=1">
+<!-- <link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet"> -->
+<!-- Animation -->
+<link rel="stylesheet" href="css/animate.css?">
+<!-- Core -->
+<!-- <link rel="stylesheet" href="http://gettimi.com/ios/www/css/my-app.css?n=1"> -->
+<link rel="stylesheet" href="css/my-app.css?n=1">
+<!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.0.1/emojify.min.css" /> -->
+<!-- jQuery lib -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- Slider plugin -->
+<script type="text/javascript" src="js/rangeslider.js"></script>
+<!-- transform2d lib -->
+<script type="text/javascript" src="js/jquery.transform2d.js"></script>
+<!-- jTinder lib -->
+<script type="text/javascript" src="js/jquery.jTinder.js"></script>
+<!-- // <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>Timi</title>
+<!-- Path to Framework7 Library CSS-->
+<link rel="stylesheet" href="css/framework7.ios.min.css">
+<link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+<!-- Tinder  -->
+<link rel="stylesheet" href="css/jTinder.css?n=1">
+<!-- Slider plugin -->
+<link rel="stylesheet" href="css/rangeslider.css">
+<!-- Icon plugin -->
+<link rel="stylesheet" href="css/font-awesome-4.6.1/css/font-awesome.css">
+<!-- Font -->
+<link rel="stylesheet" href="css/google-font.css?n=1">
+<!-- <link href="https://fonts.googleapis.com/css?family=PT Sans" rel="stylesheet"> -->
+<!-- Animation -->
+<link rel="stylesheet" href="css/animate.css?">
+<!-- Core -->
+<!-- <link rel="stylesheet" href="http://gettimi.com/ios/www/css/my-app.css?n=1"> -->
+<link rel="stylesheet" href="css/my-app.css?n=1">
+<!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.0.1/emojify.min.css" /> -->
+<!-- jQuery lib -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- Slider plugin -->
+<script type="text/javascript" src="js/rangeslider.js"></script>
+<!-- transform2d lib -->
+<script type="text/javascript" src="js/jquery.transform2d.js"></script>
+<!-- jTinder lib -->
+<script type="text/javascript" src="js/jquery.jTinder.js"></script>
+<script>
+   window.onload = function() {
+     var myApp = new Framework7();
+     var mySwiper1 = myApp.swiper('.swiper-food-container', {
+         spaceBetween: 0, 
+         slidesPerView: 1, 
+         speed: 200, 
+         // pagination:'.swiper-pagination',
+     });   
+     $(".swiper-food-container").css("height",$(".swiper-food-container").width() )
+   
+   };
+</script>
+<div class="view view-main" data-page="restaurant-page">
+   <div class="navbar" id="navbar-container" style="visibility: visible;">
+      <!-- Home page navbar -->          
+      <div class="navbar-inner cached" data-page="index">
+         <div class="center" style="left: 199px;"></div>
+      </div>
+      <div class="navbar-inner cached" data-page="match-page">
+         <div class="left">               <a class="link back-link">                               <i class="fa fa-chevron-left"></i>                <span class="back-link-text"></span>              </a>            </div>
+         <div class="center">Matching</div>
+      </div>
+      <div class="navbar-inner cached" data-page="ask-calendar">
+         <div class="left">               <a class="link back-link" id="ask-calendar-back">                               <i class="fa fa-chevron-left"></i>                <span class="back-link-text"></span>              </a>            </div>
+         <div class="center">Your availability</div>
+      </div>
+      <div class="navbar-inner cached" data-page="chatting-page">
+         <div class="left" style="position: absolute;">               <a class="link back-link" id="ask-calendar-back">                               <i class="fa fa-chevron-left"></i>                <span class="back-link-text"></span>              </a>            </div>
+         <div class="center" id="chatting-page-title"><img onclick="openSystem ()" class="navbar-chatting-avatar">Ray Xiao</div>
+      </div>
+      <div class="navbar-inner cached" data-page="personal-setting-page">
+         <div class="left" onclick="postPersonalInfo () ">               <a class="link ">                               <i class="fa fa-chevron-left"></i>                <span class="back-link-text"></span>              </a>            </div>
+         <div class="center">Personal Settings</div>
+         <div class="right">              <a class="link" onclick="postPersonalInfo () ">                               <span>Save</span>              </a>                        </div>
+      </div>
+      <div class="navbar-inner cached" data-page="availability-page">
+         <div class="left">               <a class="link back-link">                               <i class="fa fa-chevron-left"></i>                <span class="back-link-text"></span>              </a>            </div>
+         <div class="center">My Availability</div>
+         <div class="right">            </div>
+      </div>
+      <div class="navbar-inner cached" data-page="phone-number">
+         <div class="center">Personal Info</div>
+      </div>
+      <div class="navbar-inner cached" data-page="friends-list">
+         <div class="left">               <a class="link back-link">                               <i class="fa fa-chevron-left"></i>                <span class="back-link-text"></span>              </a>            </div>
+         <div class="center">Friends</div>
+      </div>
+      <div class="navbar-inner cached" data-page="nearby-list">
+         <div class="left">               <a class="link back-link">                               <i class="fa fa-chevron-left"></i>                <span class="back-link-text"></span>              </a>            </div>
+         <div class="center">People Nearby</div>
+      </div>
+      <div class="navbar-inner navbar-on-left" data-page="home">
+         <div id="home-page-navbar-left" class="home-nav" style="visibility: hidden;"><a class="link left-link" onclick="switchView()"><i style="visibility: hidden" class="fa fa-sort-amount-desc" aria-hidden="true"></i></a></div>
+         <div class="home-nav" id="home-page-navbar-center" onclick="selectActivity ()" style="left: 105px; visibility: hidden;">
+            <div class="buttons-row">
+               <div class="tab-link button active" style="padding: auto 10px;">BEST</div>
+               <div class="tab-link button">NEARBY</div>
+            </div>
+         </div>
+         <div id="home-page-navbar-right" class="home-nav" style="visibility: hidden;"><a class="link right-link" onclick="myApp.showTab(&quot;#map-tab&quot;)">MAP</a></div>
+         <div class="subnavbar" style="display: none;">
+            <div class="buttons-row">
+               <a href="#tab1" class="button time-tab lunch-tab tab-link active">Today<span class="date-tag">9-23</span><span style="display:none" class="request-badge"></span></a>            <a href="#tab2" class="button time-tab dinner-tab tab-link">Tomorrow<span class="date-tag">9-24</span><span style="display:none" class="request-badge"></span></a>            <a href="#tab3" class="button time-tab night-tab tab-link">Sunday<span class="date-tag">9-25</span><span style="display:none" class="request-badge"></span></a>            <a href="#tab0" class="button time-tab now-tab tab-link ">Now<span class="date-tag">9-23</span><span style="display:none" class="request-badge"></span></a>            
+               <div id="underline-border"></div>
+            </div>
+         </div>
+      </div>
+      <div class="navbar-inner navbar-on-center" data-page="restaurant-page">
+         <div class="left">               <a class="link back-link">                               <i class="fa fa-chevron-left"></i>                <span class="back-link-text"></span>              </a>            </div>
+         <div class="center-title center" id="restaurant-name-navbar" style="left: -14.5px; display: block;">Bergdorf Goodman Restaurant</div>
+         <div class="right">              <a class="link" onclick="likeEvent()" style="font-size: 24px;" id="restaurant-bookmark-button"></a>                        </div>
+      </div>
+   </div>
+   <span class="progressbar-infinite" id="progressbar"></span>         
+   <div class="pages navbar-through">
+      <div class="page cached" data-page="phone-number">
+         <div class="page-content">
+            <form id="my-form" class="list-block">
+               <ul>
+                  <li>
+                     <div class="item-content">
+                        <div class="item-inner">
+                           <div class="item-title label">                          <i class="fa fa-user"></i>                        </div>
+                           <div class="item-input">                          <input id="user-name-input" type="text" name="name" placeholder="( your name )">                        </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="item-content">
+                        <div class="item-inner">
+                           <div class="item-title label">                          <i class="fa fa-envelope"></i>                        </div>
+                           <div class="item-input">                          <input id="user-email-input" type="text" name="email" placeholder="( your email )">                        </div>
+                        </div>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="item-content">
+                        <div class="item-inner">
+                           <div class="item-title label" id="country-code"><span></span><input id="country-code-input" placeholder="+1" value="+1"></div>
+                           <div class="item-input">                          <input id="phone-number-input" type="tel" name="phone" placeholder="( your phone # )">                        </div>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+            </form>
+            <div class="button one-line-button button-fill color-pink" onclick="verifyPhone()">                TEXT ME!               </div>
+            <div class="button one-line-button button-fill color-gray" onclick="logout()">                Reset               </div>
+            <div class="one-line-prompt">                 Please let Timi verify your number to find friends for you              </div>
+         </div>
+      </div>
+      <div class="page no-navbar cached" data-page="index">
+         <div class="page-content first-page">
+            <!--               <h1 class="title">              Timi                                  </h1> -->              <img class="front-page-logo " src="img/timi.png">              
+            <div class="gps-ring-startscreen"></div>
+         </div>
+      </div>
+      <div class="page cached " data-page="availability-page">
+         <div class="page-content">
+            <div class="one-line-prompt">                      let Timi know when you are available!                     </div>
+            <div class="calendar-table">                           </div>
+         </div>
+      </div>
+      <div class="page cached " data-page="personal-setting-page">
+         <div class="page-content">
+            <div class="content-block-title">                <span>My School</span>              </div>
+            <div class="list-block" id="prompt-list-block">
+               <ul>
+                  <li class="align-top">
+                     <div class="item-content">
+                        <div class="item-inner">
+                           <div class="item-input">                            <textarea class="resizable" id="current" placeholder="Where do you work / where do you go to school? "></textarea>                        </div>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+            <div class="content-block-title">                <span>Privacy</span>              </div>
+            <div class="list-block" id="prompt-list-block">
+               <ul>
+                  <li>
+                     <div class="item-content">
+                        <div class="item-inner">
+                           <div class="item-title label" style="width:80%;">Show Friends of Friends</div>
+                           <div class="item-input">
+                              <label class="label-switch" style="position: absolute;right: 20px; top: 8px;">
+                                 <input type="checkbox" id="allowFoF">                            
+                                 <div class="checkbox"></div>
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+            <div class="content-block-title">                <span>Favorite Activities <a id="favorite-food-prompt" class="clear-whatsup"></a></span>              </div>
+            <form class="list-block" id="favorite-food">
+               <ul>
+                  <li>
+                     <label class="label-checkbox item-content">
+                        <input type="checkbox" name="my-checkbox" value="Books">                      
+                        <div class="item-media">                        <i class="icon icon-form-checkbox"></i>                      </div>
+                        <div class="item-inner">
+                           <div class="item-title">Books</div>
+                        </div>
+                     </label>
+                  </li>
+               </ul>
+            </form>
+         </div>
+      </div>
+      <div class="page cached" data-page="verification-code">
+         <div class="page-content">
+            <form class="list-block">
+               <ul>
+                  <li>
+                     <div class="item-content">
+                        <div class="item-inner">
+                           <div class="item-input">                          <input id="verification-code-input" type="tel" name="verification-code" placeholder="Verification Code">                        </div>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+            </form>
+            <div class="button one-line-button color-pink " onclick="verifyCode()">                SUBMIT              </div>
+            <div class="button one-line-button color-gray " onclick="resendCode()">                Resend              </div>
+         </div>
+      </div>
+      <div class="page page-on-left" data-page="home">
+         <div class="toolbar tabbar tabbar-labels">
+            <div class="toolbar-inner">
+               <a href="#rate-tab" id="rate-tab-button" class="tab-link active">
+                  <i class="fa fa-star-half-o">
+                     <!-- <span class="badge bg-red"></span> -->                    
+                  </i>
+                  <span class="tabbar-label">Ideas</span>                
+               </a>
+               <a href="#moment-tab" class="tab-link">
+                  <i class="fa fa-heart">
+                     <!-- <span class="badge bg-red"></span> -->                    
+                  </i>
+                  <span class="tabbar-label">Bookmarks</span>                
+               </a>
+               <a href="#explore-tab" id="explore-tab-button" class="tab-link">                    <i class="fa fa-glass"><span id="badge-red-dot-0" style="display:none" class="badge bg-red"></span></i>                    <span class="tabbar-label">Date</span>                </a>                <a href="#event-tab" id="event-tab-button" class="tab-link">                    <i class="fa fa-calendar-check-o">                       <span id="event-badge" style="display:none;" class="badge bg-red"></span>                    </i>                    <span class="tabbar-label">Notifications</span>                </a>                <a href="#messenger-tab" class="tab-link">                    <i class="fa fa-comments"><span id="badge-red-dot-2" style="display:none" class="badge bg-red"></span></i>                    <span class="tabbar-label">Chats</span>                </a>              
+            </div>
+         </div>
+         <div class="tabs">
+            <div id="explore-tab" class="tab">
+               <div class="content-block">
+                  <div class="page-content">
+                     <div id="loading-icon">                    </div>
+                     <div id="tinderslide" style="display: block; width: 364px; left: 25px; margin-top: 69px;">
+                        <div id="tinder-contain">
+                           <ul id="tinder-list-ul">
+                              <li class="">
+                                 <div class="tinder-card demo-card-header-pic">
+                                    <div class="card-pic" style="background: url(&quot;http://gettimi.com/uploads/avatar/52/avatar1464929563290.jpg&quot;) 50% 50% no-repeat; height: 364px; width: 364px;"></div>
+                                    <div style="" class="card-header no-border card-username-section">
+                                       👑 Cherry Zhang
+                                       <div class="color-white"><a href="#" class="mutual-friends-click color-white" onclick="showMutualFriends(mutual_friends_string)">56 mutual <i class="fa fa-users" aria-hidden="true"></i></a></div>
+                                    </div>
+                                    <div class="card-content">
+                                       <div class="card-content-inner">
+                                          <div class="color-gray">
+                                             <div class="card-pic-title">School / Occupation</div>
+                                             <div class="card-pic-content">Columbia University</div>
+                                          </div>
+                                          <div class="color-gray">
+                                             <div class="card-pic-title">Favorite Activities</div>
+                                             <div class="card-pic-content">Concerts/Events, Food, Movie, Party</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="like">INVITE</div>
+                                 <div class="dislike">PASS</div>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="row decision-button-row" style="bottom: 88px;">
+                           <div class="col-33 modern-square-button dislike-button button-fill color-gray" style="background-color: rgb(214, 215, 216); height: 44px; line-height: 44px;">PASS</div>
+                           <div class="col-33 modern-square-button like-button button-fill color-gray" style="background-color: rgb(166, 167, 168); height: 44px; line-height: 44px;">SECRET</div>
+                           <div class="col-33 modern-square-button superlike-button button-fill color-gray" style="background-color: rgb(99, 222, 154); height: 44px; line-height: 44px;">INVITE</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Tab 2 -->              
+            <div id="event-tab" class="tab">
+               <div class="content-block">
+                  <div class="page-content  contacts-content">
+                     <div class="list-block media-list contacts-block" id="event-list">
+                        <ul>                             </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Tab 2 -->              
+            <div id="search-tab" class="tab">
+               <div class="page-content">
+                  <div id="nearbyslide">
+                     <ul>                             </ul>
+                  </div>
+               </div>
+            </div>
+            <!-- Tab 2 -->              
+            <div id="map-tab" class="tab">
+               <div class="restaurant-info-group">
+                  <div class="row restaurant-info-bar restaurant-category-block">
+                     <div class="category-tab col-25 active " onclick="loadCategory(1, this)">
+                        <div class="col-title"><img class="first-page-icon" src="http://gettimi.com/images/category/general.svg"></div>
+                        <div class="col-subtitle">All</div>
+                     </div>
+                     <div class="category-tab col-25  " onclick="loadCategory(4, this)">
+                        <div class="col-title"><img class="first-page-icon" src="http://gettimi.com/images/category/bar.svg"></div>
+                        <div class="col-subtitle">Bar</div>
+                     </div>
+                     <div class="category-tab col-25  " onclick="loadCategory(3, this)">
+                        <div class="col-title"><img class="first-page-icon" src="http://gettimi.com/images/category/japenese.svg"></div>
+                        <div class="col-subtitle">Japanese</div>
+                     </div>
+                     <div class="category-tab col-25  " onclick="loadCategory(2, this)">
+                        <div class="col-title"><img class="first-page-icon" src="http://gettimi.com/images/category/brunch.svg"></div>
+                        <div class="col-subtitle">Brunch</div>
+                     </div>
+                     <div class="category-tab col-25  " onclick="loadCategory(5, this)">
+                        <div class="col-title"><img class="first-page-icon" src="http://gettimi.com/images/category/italian2.svg"></div>
+                        <div class="col-subtitle">Fine Dining</div>
+                     </div>
+                     <div class="category-tab col-25  " onclick="loadCategory(7, this)">
+                        <div class="col-title"><img class="first-page-icon" src="http://gettimi.com/images/category/afternoontea.svg"></div>
+                        <div class="col-subtitle">Dessert &amp; Tea</div>
+                     </div>
+                     <div class="category-tab col-25  " onclick="loadCategory(8, this)">
+                        <div class="col-title"><img class="first-page-icon" src="http://gettimi.com/images/category/delivery.svg"></div>
+                        <div class="col-subtitle">Korean</div>
+                     </div>
+                     <div class="category-tab col-25  " onclick="loadCategory(9, this)">
+                        <div class="col-title"><img class="first-page-icon" src="http://gettimi.com/images/category/chinese.svg"></div>
+                        <div class="col-subtitle">Chinese</div>
+                     </div>
+                     <div class="category-tab col-25  " onclick="loadCategory(10, this)">
+                        <div class="col-title"><img class="first-page-icon" src="http://gettimi.com/images/category/korean.svg"></div>
+                        <div class="col-subtitle">Casual</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="page-content">
+                  <div id="map-element">                         </div>
+                  <div id="search-in-map" onclick="searchInArea()" class="modern-square-button">Search In This Area                         </div>
+                  <div id="search-preview" class=" "></div>
+               </div>
+            </div>
+            <div id="moment-tab" class="tab">
+               <div class="page-content contacts-content  ">
+                  <div id="moment-list" class="contact-list list-block">
+                     <ul>                             </ul>
+                  </div>
+               </div>
+            </div>
+            <div id="rate-tab" class="tab active">
+               <div class="restaurant-info-group">
+                  <div class="row restaurant-info-bar restaurant-category-block">
+                     <div class="category-tab col-25 active " onclick="loadCategory(1, this)">
+                        <div class="col-title"><img class="first-page-icon" src="http://gettimi.com/images/category/general.svg"></div>
+                        <div class="col-subtitle">All</div>
+                     </div>
+                     <div class="category-tab col-25  " onclick="loadCategory(4, this)">
+                        <div class="col-title"><img class="first-page-icon" src="http://gettimi.com/images/category/bar.svg"></div>
+                        <div class="col-subtitle">Bar</div>
+                     </div>
+                     <div class="category-tab col-25  " onclick="loadCategory(3, this)">
+                        <div class="col-title"><img class="first-page-icon" src="http://gettimi.com/images/category/japenese.svg"></div>
+                        <div class="col-subtitle">Japanese</div>
+                     </div>
+                     <div class="category-tab col-25  " onclick="loadCategory(2, this)">
+                        <div class="col-title"><img class="first-page-icon" src="http://gettimi.com/images/category/brunch.svg"></div>
+                        <div class="col-subtitle">Brunch</div>
+                     </div>
+                     <div class="category-tab col-25  " onclick="loadCategory(5, this)">
+                        <div class="col-title"><img class="first-page-icon" src="http://gettimi.com/images/category/italian2.svg"></div>
+                        <div class="col-subtitle">Fine Dining</div>
+                     </div>
+                     <div class="category-tab col-25  " onclick="loadCategory(7, this)">
+                        <div class="col-title"><img class="first-page-icon" src="http://gettimi.com/images/category/afternoontea.svg"></div>
+                        <div class="col-subtitle">Dessert &amp; Tea</div>
+                     </div>
+                     <div class="category-tab col-25  " onclick="loadCategory(8, this)">
+                        <div class="col-title"><img class="first-page-icon" src="http://gettimi.com/images/category/delivery.svg"></div>
+                        <div class="col-subtitle">Korean</div>
+                     </div>
+                     <div class="category-tab col-25  " onclick="loadCategory(9, this)">
+                        <div class="col-title"><img class="first-page-icon" src="http://gettimi.com/images/category/chinese.svg"></div>
+                        <div class="col-subtitle">Chinese</div>
+                     </div>
+                     <div class="category-tab col-25  " onclick="loadCategory(10, this)">
+                        <div class="col-title"><img class="first-page-icon" src="http://gettimi.com/images/category/korean.svg"></div>
+                        <div class="col-subtitle">Casual</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="page-content contacts-content infinite-scroll" id="rate-page-content-id">
+                  <div class="list-block contacts-block two-column" id="picture-list">
+                     <div class="column" id="column-1">
+                        <li class="image-class-half " onclick="goToRestaurantPage(174, &quot;http%3A%2F%2Fgettimi.com%2Fuploads%2FeventPics%2Fcrontab%2Fevents1471646781429.jpg&quot;, 673)">
+                           <a class="image-holder  lazy lazy-fadein " style="height: 168px; background: url(http://gettimi.com/uploads/eventPics/crontab/events1471646781429.jpg) 100% 50% no-repeat;background-size:cover; "></a>
+                           <div class="image-background" style="height: 168px;"></div>
+                           <div id="image-avatar-673"></div>
+                           <a class="image-class-place">Beauty &amp; Essex </a><a class="image-class-subtitle">- Widely regarded as one of New York's most beautiful restaurants</a>
+                           <div class="image-class-type">Brunch</div>
+                           <div class="image-class-location-right">2.9mi</div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(670, &quot;https%3A%2F%2Fscontent.cdninstagram.com%2Ft51.2885-15%2Fs640x640%2Fsh0.08%2Fe35%2F14099345_346722592382676_592214426_n.jpg&quot;, 5515)">
+                           <a class="image-holder  lazy lazy-fadein " style="height: 217px; background: url(https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/14099345_346722592382676_592214426_n.jpg) 100% 50% no-repeat;background-size:cover; "></a>
+                           <div class="image-background" style="height: 217px;"></div>
+                           <div id="image-avatar-5515"></div>
+                           <a class="image-class-place">B2 Harlem</a>
+                           <div class="image-class-type">Uncategorized</div>
+                           <div class="image-class-location-right">3.9mi</div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(558, &quot;http%3A%2F%2Fgettimi.com%2Fuploads%2FeventPics%2Fcrontab%2Fevents1474341083315.jpg&quot;, 3890)">
+                           <a class="image-holder  lazy lazy-fadein " style="height: 158px; background: url(http://gettimi.com/uploads/eventPics/crontab/events1474341083315.jpg) 100% 50% no-repeat;background-size:cover; "></a>
+                           <div class="image-background" style="height: 158px;"></div>
+                           <div id="image-avatar-3890"></div>
+                           <a class="image-class-place">Jongro BBQ</a>
+                           <div class="image-class-type">Korean</div>
+                           <div class="image-class-location-right">1.2mi</div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(671, &quot;https%3A%2F%2Fscontent.cdninstagram.com%2Ft51.2885-15%2Fs640x640%2Fsh0.08%2Fe35%2F13714150_1152912084772169_117300380_n.jpg&quot;, 5524)">
+                           <a class="image-holder  lazy lazy-fadein " style="height: 173px; background: url(https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/13714150_1152912084772169_117300380_n.jpg) 100% 50% no-repeat;background-size:cover; "></a>
+                           <div class="image-background" style="height: 173px;"></div>
+                           <div id="image-avatar-5524"></div>
+                           <a class="image-class-place">East Harlem Bottling Co.</a>
+                           <div class="image-class-type">Fine Dining</div>
+                           <div class="image-class-location-right">3.6mi</div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(459, &quot;http%3A%2F%2Fgettimi.com%2Fuploads%2FeventPics%2Fcrontab%2Fevents1473461194796.jpg&quot;, 2447)">
+                           <a class="image-holder  lazy lazy-fadein " style="height: 187px; background: url(http://gettimi.com/uploads/eventPics/crontab/events1473461194796.jpg) 100% 50% no-repeat;background-size:cover; "></a>
+                           <div class="image-background" style="height: 187px;"></div>
+                           <div id="image-avatar-2447"></div>
+                           <a class="image-class-place">Piora</a>
+                           <div class="image-class-type">Fine Dining</div>
+                           <div class="image-class-location-right">2.2mi</div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(488, &quot;http%3A%2F%2Fgettimi.com%2Fuploads%2FeventPics%2Fcrontab%2Fevents1473461279397.jpg&quot;, 2890)">
+                           <a class="image-holder  lazy lazy-fadein " style="height: 230px; background: url(http://gettimi.com/uploads/eventPics/crontab/events1473461279397.jpg) 100% 50% no-repeat;background-size:cover; "></a>
+                           <div class="image-background" style="height: 230px;"></div>
+                           <div id="image-avatar-2890"></div>
+                           <a class="image-class-place">Jacob’s Pickles</a>
+                           <div class="image-class-type">Brunch</div>
+                           <div class="image-class-location-right">2.1mi</div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(488, &quot;http%3A%2F%2Fgettimi.com%2Fuploads%2FeventPics%2Fcrontab%2Fevents1473461278346.jpg&quot;, 2887)">
+                           <a class="image-holder  lazy lazy-fadein " style="height: 230px; background: url(http://gettimi.com/uploads/eventPics/crontab/events1473461278346.jpg) 100% 50% no-repeat;background-size:cover; "></a>
+                           <div class="image-background" style="height: 230px;"></div>
+                           <div id="image-avatar-2887"></div>
+                           <a class="image-class-place">Jacob’s Pickles</a>
+                           <div class="image-class-type">Brunch</div>
+                           <div class="image-class-location-right">2.1mi</div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(431, &quot;http%3A%2F%2Fgettimi.com%2Fuploads%2FeventPics%2Fcrontab%2Fevents1473461117976.jpg&quot;, 2043)">
+                           <a class="image-holder  lazy lazy-fadein " style="height: 198px; background: url(http://gettimi.com/uploads/eventPics/crontab/events1473461117976.jpg) 100% 50% no-repeat;background-size:cover; "></a>
+                           <div class="image-background" style="height: 198px;"></div>
+                           <div id="image-avatar-2043"></div>
+                           <a class="image-class-place">Le Bernardin</a>
+                           <div class="image-class-type">Fine Dining</div>
+                           <div class="image-class-location-right">0.9mi</div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(489, &quot;http%3A%2F%2Fgettimi.com%2Fuploads%2FeventPics%2Fcrontab%2Fevents1473461282600.jpg&quot;, 2903)">
+                           <a class="image-holder  lazy lazy-fadein " style="height: 189px; background: url(http://gettimi.com/uploads/eventPics/crontab/events1473461282600.jpg) 100% 50% no-repeat;background-size:cover; "></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-2903"></div>
+                           <a class="image-class-place">Rosemary’s</a>
+                           <div class="image-class-type">Brunch</div>
+                           <div class="image-class-location-right">1.9mi</div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(300, &quot;http%3A%2F%2Fgettimi.com%2Fuploads%2FeventPics%2Fcrontab%2Fevents147196512366.jpg&quot;, 908)">
+                           <a class="image-holder  lazy lazy-fadein " style="height: 219px; background: url(http://gettimi.com/uploads/eventPics/crontab/events147196512366.jpg) 100% 50% no-repeat;background-size:cover; "></a>
+                           <div class="image-background" style="height: 219px;"></div>
+                           <div id="image-avatar-908"></div>
+                           <a class="image-class-place">Decoy</a><a class="image-class-subtitle">- "Absolute Best Peking Duck in NYC"</a>
+                           <div class="image-class-type">Chinese</div>
+                           <div class="image-class-location-right">2mi</div>
+                        </li>
+                     </div>
+                     <div class="column" id="column-2">
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant14.jpg&quot;, 1456)">
+                           <a class="image-holder lazy lazy-fadein" style="height: 192px; background: url(http://gettimi.com/images/bgrestaurant/bgrestaurant14.jpg) 100% 50% no-repeat;background-size:cover; "></a>
+                           <div class="image-background" style="height: 192px;"></div>
+                           <div id="image-avatar-1456"></div>
+                           <a class="image-class-place">Bergdorf Goodman Restaurant</a>
+                           <div class="image-class-type">Dessert </div>
+                           <div class="image-class-location-right">1.3mi</div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(618, &quot;https%3A%2F%2Fscontent.cdninstagram.com%2Ft51.2885-15%2Fe35%2F13269396_232143340499379_1227574975_n.jpg&quot;, 4741)">
+                           <a class="image-holder  lazy lazy-fadein " style="height: 220px; background: url(https://scontent.cdninstagram.com/t51.2885-15/e35/13269396_232143340499379_1227574975_n.jpg) 100% 50% no-repeat;background-size:cover; "></a>
+                           <div class="image-background" style="height: 220px;"></div>
+                           <div id="image-avatar-4741"></div>
+                           <a class="image-class-place">Minamoto Kitchoan</a>
+                           <div class="image-class-type">Dessert </div>
+                           <div class="image-class-location-right">1.3mi</div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(629, &quot;https%3A%2F%2Fscontent.cdninstagram.com%2Ft51.2885-15%2Fe35%2F14156116_253611845037306_403354632_n.jpg&quot;, 4892)">
+                           <a class="image-holder  lazy lazy-fadein " style="height: 203px; background: url(https://scontent.cdninstagram.com/t51.2885-15/e35/14156116_253611845037306_403354632_n.jpg) 100% 50% no-repeat;background-size:cover; "></a>
+                           <div class="image-background" style="height: 203px;"></div>
+                           <div id="image-avatar-4892"></div>
+                           <a class="image-class-place">Woorijip Authentic Korean Food</a>
+                           <div class="image-class-type">Korean</div>
+                           <div class="image-class-location-right">1.2mi</div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(514, &quot;http%3A%2F%2Fgettimi.com%2Fuploads%2FeventPics%2Fcrontab%2Fevents1473461350375.jpg&quot;, 3260)">
+                           <a class="image-holder  lazy lazy-fadein " style="height: 329px; background: url(http://gettimi.com/uploads/eventPics/crontab/events1473461350375.jpg) 100% 50% no-repeat;background-size:cover; "></a>
+                           <div class="image-background" style="height: 329px;"></div>
+                           <div id="image-avatar-3260"></div>
+                           <a class="image-class-place">Mother’s Ruin</a><a class="image-class-subtitle">- Amazing drinks and casual awesomeness</a>
+                           <div class="image-class-type">Fine Dining</div>
+                           <div class="image-class-location-right">2.8mi</div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(545, &quot;http%3A%2F%2Fgettimi.com%2Fuploads%2FeventPics%2Fcrontab%2Fevents1474341056917.jpg&quot;, 3705)">
+                           <a class="image-holder  lazy lazy-fadein " style="height: 193px; background: url(http://gettimi.com/uploads/eventPics/crontab/events1474341056917.jpg) 100% 50% no-repeat;background-size:cover; "></a>
+                           <div class="image-background" style="height: 193px;"></div>
+                           <div id="image-avatar-3705"></div>
+                           <a class="image-class-place">Aburiya Kinnosuke</a><a class="image-class-subtitle">- Cozy Japanese izakaya eatery with robata grilling &amp; sake drinking </a>
+                           <div class="image-class-type">Fine Dining</div>
+                           <div class="image-class-location-right">1.6mi</div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(318, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Flad%2Flad5.jpg&quot;, 1075)">
+                           <a class="image-holder  lazy lazy-fadein " style="height: 199px; background: url(http://gettimi.com/images/lad/lad5.jpg) 100% 50% no-repeat;background-size:cover; "></a>
+                           <div class="image-background" style="height: 199px;"></div>
+                           <div id="image-avatar-1075"></div>
+                           <a class="image-class-place">Laduree Soho</a><a class="image-class-subtitle">- NYC's Best Patio &amp; Garden Dining</a>
+                           <div class="image-class-type">Dessert </div>
+                           <div class="image-class-location-right">2.6mi</div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(546, &quot;http%3A%2F%2Fgettimi.com%2Fuploads%2FeventPics%2Fcrontab%2Fevents147434105726.jpg&quot;, 3710)">
+                           <a class="image-holder  lazy lazy-fadein " style="height: 192px; background: url(http://gettimi.com/uploads/eventPics/crontab/events147434105726.jpg) 100% 50% no-repeat;background-size:cover; "></a>
+                           <div class="image-background" style="height: 192px;"></div>
+                           <div id="image-avatar-3710"></div>
+                           <a class="image-class-place">Koi Restaurant</a>
+                           <div class="image-class-type">Japanese</div>
+                           <div class="image-class-location-right">1mi</div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(498, &quot;http%3A%2F%2Fgettimi.com%2Fuploads%2FeventPics%2Fcrontab%2Fevents1473461304947.jpg&quot;, 3019)">
+                           <a class="image-holder  lazy lazy-fadein " style="height: 331px; background: url(http://gettimi.com/uploads/eventPics/crontab/events1473461304947.jpg) 100% 50% no-repeat;background-size:cover; "></a>
+                           <div class="image-background" style="height: 331px;"></div>
+                           <div id="image-avatar-3019"></div>
+                           <a class="image-class-place">Maialino</a>
+                           <div class="image-class-type">Brunch</div>
+                           <div class="image-class-location-right">1.8mi</div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(553, &quot;http%3A%2F%2Fgettimi.com%2Fuploads%2FeventPics%2Fcrontab%2Fevents1474341070706.jpg&quot;, 3809)">
+                           <a class="image-holder  lazy lazy-fadein " style="height: 151px; background: url(http://gettimi.com/uploads/eventPics/crontab/events1474341070706.jpg) 100% 50% no-repeat;background-size:cover; "></a>
+                           <div class="image-background" style="height: 151px;"></div>
+                           <div id="image-avatar-3809"></div>
+                           <a class="image-class-place">Ippudo Westside</a>
+                           <div class="image-class-type">Japanese</div>
+                           <div class="image-class-location-right">0.7mi</div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(565, &quot;https%3A%2F%2Fscontent.cdninstagram.com%2Ft51.2885-15%2Fe35%2F14309939_306242626418420_10875747_n.jpg&quot;, 3986)">
+                           <a class="image-holder  lazy lazy-fadein " style="height: 333px; background: url(https://scontent.cdninstagram.com/t51.2885-15/e35/14309939_306242626418420_10875747_n.jpg) 100% 50% no-repeat;background-size:cover; "></a>
+                           <div class="image-background" style="height: 333px;"></div>
+                           <div id="image-avatar-3986"></div>
+                           <a class="image-class-place">15 East Restaurant</a>
+                           <div class="image-class-type">Japanese</div>
+                           <div class="image-class-location-right">1.8mi</div>
+                        </li>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Tab 3 -->              
+            <div id="messenger-tab" class="tab">
+               <div class="content-block">
+                  <div class="page-content">
+                     <div id="messenger-list" class="list-block media-list">                    </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Tab 4 -->              
+            <div id="invitation-tab" class="tab">
+               <div class="content-block">
+                  <div class="page-content" id="list-content-block">
+                     <div id="logo-holder" style="display: block; top: -45px;">
+                        <img src="img/timi.png" class="pulse-portrait animated bounceIn">   
+                        <div class="gps-ring"></div>
+                        <div class="one-line-prompt no-friend" style="color: rgb(146, 146, 146); font-size: 17px; display: none;">It seems that <span class="color-black">no friend</span> is available for Today. Send a <span class="color-pink">FREE text!<i class="fa fa-smile-o" aria-hidden="true"></i></span> to invite your friends to Timi!</div>
+                        <div class="one-line-prompt no-friend" style="color: rgb(34, 34, 34); font-size: 17px; font-weight: 700; display: none;">Invite <span id="invite-friend-name"></span> !</div>
+                        <div class="row">
+                           <div class="col-50">
+                              <div class="button button-fill color-gray no-friend" style="height: 50px; line-height: 50px; display: none;" onclick="skipInvitingThisFriend()">Skip</div>
+                           </div>
+                           <div class="col-50">
+                              <div class="button button-fill color-pink no-friend" style="height: 50px; line-height: 50px; display: none;" onclick="sendInvite()" id="invite-button">Invite!</div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-100">
+                              <div class="button button-fill color-light-gray no-friend" style="height: 50px; line-height: 50px; display: none;" onclick="addRandomFriendPopup()">Friends You May Know</div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-100">
+                              <div class="button button-fill color-light-gray no-friend" style="height: 50px; line-height: 50px; display: none;" onclick="rewindInvitation()">Rewind and Start Over</div>
+                           </div>
+                        </div>
+                     </div>
+                     <form id="listview-user" class="list-block media-list" style="display: none;">Recommended for you                     </form>
+                  </div>
+                  <div id="invite-all-block" class="row">
+                     <div class="col-50">
+                        <div class="button button-fill color-gray " style="height:44px;line-height:44px;" onclick="clearSelection()"><i class="fa fa-braille color-white" style="margin-right: 6px;" aria-hidden="true"></i>Clear</div>
+                     </div>
+                     <div class="col-50">
+                        <div class="button button-fill color-green " style="height:44px;line-height:44px;background:#63de9a;" onclick="top10Selection()"><i class="fa fa-list-ol color-white" style="margin-right: 6px;" aria-hidden="true"></i>Top 10</div>
+                     </div>
+                     <div class="button color-pink one-line-button button-fill" style="width:100%;    margin: 15px auto;" onclick="inviteAll()"> Let's go 🎉🎉🎉</div>
+                  </div>
+               </div>
+            </div>
+            <!-- Tab 5 -->              
+            <div id="more-tab" class="tab">
+               <div class="content-block">
+                  <div class="page-content">
+                     <div class="profile-image-container" id="profile-pic-background">                    </div>
+                     <div class="">                      <img onclick="changePicture()" id="profile-pic" class="profile-pic" src="http://gettimi.com/uploads/avatar/23/avatar1472586831275.jpg">                    </div>
+                     <div class="user-name" id="profile-name">                    </div>
+                     <div class="edit-profile-text" onclick="changePicture()">                       <b>Edit Profile Picture</b>                    </div>
+                     <div class="list-block media-list">
+                        <ul>
+                           <li onclick="mainView.router.loadPage({&quot;pageName&quot;:&quot;personal-setting-page&quot;})">
+                              <div class="item-content">
+                                 <div class="item-media">                              <i class="fa fa-heart icon-background-badge" style="background:#ec5298"></i>                            </div>
+                                 <div class="item-inner">
+                                    <div class="item-title-row">
+                                       <div class="item-title">Personal Setting</div>
+                                    </div>
+                                    <div class="item-subtitle">Favorite Activities, Prompt, and more</div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li onclick="window.open(&quot;sms:6178005220&amp;body=Hi I have a question about Timi:&quot;)">
+                              <div class="item-content">
+                                 <div class="item-media">                              <i class="fa  fa-question-circle icon-background-badge" style="background:#fc0"></i>                            </div>
+                                 <div class="item-inner">
+                                    <div class="item-title-row">
+                                       <div class="item-title">Help</div>
+                                    </div>
+                                    <div class="item-subtitle">FAQ, contact, and more</div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="item-content" onclick="logout()">
+                                 <div class="item-media">                              <i class="fa  fa-sign-out icon-background-badge" style="background:lightgray"></i>                            </div>
+                                 <div class="item-inner">
+                                    <div class="item-title-row">
+                                       <div class="item-title">Log out</div>
+                                    </div>
+                                    <div class="item-subtitle">No, No, and more</div>
+                                 </div>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="page page-on-center" data-page="restaurant-page">
+         <div class="page-content contacts-content restaurant-page-content">
+            <div class="list-block contacts-block">
+               <div class="list-group">
+                  <ul>
+                     <div id="restaurant-picture-list">
+                        <div class="swiper-container swiper-food-container swiper-container-horizontal">
+                           <div class="swiper-wrapper">
+                              <div class="swiper-slide swiper-slide-active" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant14.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide swiper-slide-next" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant13.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant1.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant2.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant11.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant9.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant6.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant10.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant23.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant3.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant4.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant15.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant8.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant12.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant22.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant21.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant7.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant5.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant20.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant16.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant18.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant17.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                              <div class="swiper-slide" style="width: 414px;">
+                                 <div class="image-class" style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant19.jpg&quot;) 100% 50% / cover no-repeat; height: 414px;"></div>
+                              </div>
+                           </div>
+                           <div class="swiper-pagination"></div>
+                           <div id="photo-number">23 PHOTOS</div>
+                        </div>
+                     </div>
+<!--                      <div id="action-bar">
+                        <div id="like-restaurant-button" style="color: rgb(222, 99, 99);"><i class="fa fa-bookmark"></i></div>
+                     </div> -->
+                     <div class="restaurant-info-group" style="border-bottom: 1px solid #e6e7e8;">
+                        <div class="row restaurant-info-bar">
+                           <div class="col-33 ">
+                              <div class="col-title" id="restaurant-page-distance">1.3mi</div>
+                              <div class="col-subtitle">from you</div>
+                           </div>
+                           <div class="col-33 ">
+                              <div class="col-title" id="restaurant-page-dollar">$60/ppl</div>
+                              <div class="col-subtitle">price</div>
+                           </div>
+                           <div class="col-33 ">
+                              <div class="col-title" id="restaurant-page-star">4.5<span class="col-subtitle"> / 5</span></div>
+                              <div class="col-subtitle">rating</div>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="restaurant-info-group" class="list-block restaurant-info-text-block">
+                        <ul>
+                           <li class="item-content" id="restaurant-page-address-li" style="display: flex;">
+                              <div class="item-media"><i style="background:rgb(99,154,222);" class="fa icon-background-badge fa-map"></i></div>
+                              <div class="item-inner">
+                                 <div class="item-after restaurant-info-text" id="restaurant-page-address">754 5th Ave, New York, NY 10019</div>
+                              </div>
+                           </li>
+                           <li class="item-content" id="restaurant-page-phone-li">
+                              <div class="item-media"><i style="background:rgb(99,222,154);" class="fa icon-background-badge fa-phone"></i></div>
+                              <div class="item-inner">
+                                 <div class="item-after restaurant-info-text" id="restaurant-page-phone"><a href="tel:(212) 872-8977">(212) 872-8977</a></div>
+                              </div>
+                           </li>
+                           <li class="item-content" id="restaurant-page-website-li">
+                              <div class="item-media"><i style="background:#464748;" class="fa icon-background-badge fa-at"></i></div>
+                              <div class="item-inner">
+                                 <div class="item-after restaurant-info-text" id="restaurant-page-website">http://www.bergdorfgoodman.com/BG-Restaurant/cat485403__/c.cat?icid=Rest_LP</div>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+<!--                      <div id="friend-restaurant-list" style="display: block;">
+                        <span class="restaurant-info-text">Friends who like this restaurant</span>
+                        <div class="row" id="friend-list-row" style="visibility: visible;">
+                           <div class="col-25" onclick="returnUserInfo(52, &quot;Cherry Zhang&quot;)">
+                              <img class="suggest-friend-img lazy lazy-fadein" src="http://gettimi.com/uploads/avatar/52/avatar1464929563290.jpg">
+                              <div class="suggest-friend-img-background"></div>
+                              <div class="suggest-friend-name">Cherry</div>
+                           </div>
+                           <div class="col-25" onclick="returnUserInfo(23, &quot;Ray Xiao&quot;)">
+                              <img class="suggest-friend-img lazy lazy-fadein" src="http://gettimi.com/uploads/avatar/23/avatar1472586831275.jpg">
+                              <div class="suggest-friend-img-background"></div>
+                              <div class="suggest-friend-name">Ray</div>
+                           </div>
+                           <div class="col-25" onclick="returnUserInfo(428, &quot;Lasko Zhou&quot;)">
+                              <img class="suggest-friend-img lazy lazy-fadein" src="http://gettimi.com/uploads/avatar/428/avatar1465498295286.jpg">
+                              <div class="suggest-friend-img-background"></div>
+                              <div class="suggest-friend-name">Lasko</div>
+                           </div>
+                        </div>
+                     </div> -->
+                     <div id="restaurant-map" style="position: relative;">
+                        <div style="height: 100%; width: 100%; position: absolute; background-color: rgb(229, 227, 223); overflow: hidden;">
+                           <div class="gm-style" style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;">
+                              <div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;">
+                                 <div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;">
+                                       <div style="position: absolute; left: 0px; top: 0px; z-index: 0;">
+                                          <div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;">
+                                             <div style="width: 256px; height: 256px; position: absolute; left: -5px; top: -206px;"></div>
+                                             <div style="width: 256px; height: 256px; position: absolute; left: -5px; top: 50px;"></div>
+                                             <div style="width: 256px; height: 256px; position: absolute; left: 251px; top: -206px;"></div>
+                                             <div style="width: 256px; height: 256px; position: absolute; left: 251px; top: 50px;"></div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div>
+                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div>
+                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;">
+                                       <div style="position: absolute; left: 0px; top: 0px; z-index: -1;">
+                                          <div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;">
+                                             <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -5px; top: -206px;"></div>
+                                             <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -5px; top: 50px;">
+                                                <canvas draggable="false" height="768" width="768" style="-webkit-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas>
+                                             </div>
+                                             <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 251px; top: -206px;">
+                                                <canvas draggable="false" height="768" width="768" style="-webkit-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas>
+                                             </div>
+                                             <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 251px; top: 50px;">
+                                                <canvas draggable="false" height="768" width="768" style="-webkit-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div style="position: absolute; z-index: 0; left: 0px; top: 0px;">
+                                       <div style="overflow: hidden; width: 390px; height: 140px;"><img src="https://maps.googleapis.com/maps/api/js/StaticMapService.GetMapImage?1m2&amp;1i1234949&amp;2i1576142&amp;2e1&amp;3u14&amp;4m2&amp;1u390&amp;2u140&amp;5m5&amp;1e0&amp;5szh-CN&amp;6sus&amp;10b1&amp;12b1&amp;token=19936" style="width: 390px; height: 140px;"></div>
+                                    </div>
+                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 0;">
+                                       <div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;">
+                                          <div style="position: absolute; left: -5px; top: -206px; transition: opacity 200ms ease-out;"><img src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4824!3i6156!4i256!2m3!1e0!2sm!3i365036314!3m9!2szh-CN!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!5f2&amp;token=40123" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                          <div style="position: absolute; left: -5px; top: 50px; transition: opacity 200ms ease-out;"><img src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4824!3i6157!4i256!2m3!1e0!2sm!3i365036314!3m9!2szh-CN!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!5f2&amp;token=402" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                          <div style="position: absolute; left: 251px; top: -206px; transition: opacity 200ms ease-out;"><img src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4825!3i6156!4i256!2m3!1e0!2sm!3i365036314!3m9!2szh-CN!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!5f2&amp;token=37733" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                          <div style="position: absolute; left: 251px; top: 50px; transition: opacity 200ms ease-out;"><img src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i14!2i4825!3i6157!4i256!2m3!1e0!2sm!3i365036314!3m9!2szh-CN!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!5f2&amp;token=129083" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div style="position: absolute; left: 0px; top: 0px; z-index: 2; width: 100%; height: 100%; transition-duration: 0.3s; opacity: 0; display: none;" class="gm-style-pbc">
+                                    <p class="gm-style-pbt">使用双指移动地图</p>
+                                 </div>
+                                 <div style="position: absolute; left: 0px; top: 0px; z-index: 3; width: 100%; height: 100%;"></div>
+                                 <div style="position: absolute; left: 0px; top: 0px; z-index: 4; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);">
+                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div>
+                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div>
+                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div>
+                                    <div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div>
+                                 </div>
+                              </div>
+                              <div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;">
+                                 <a target="_blank" href="https://maps.google.com/maps?ll=40.762575,-73.986743&amp;z=14&amp;t=m&amp;hl=zh-CN&amp;gl=US&amp;mapclient=apiv3" title="点击以在 Google 地图上查看此区域" style="position: static; overflow: visible; float: none; display: inline;">
+                                    <div style="width: 66px; height: 26px; cursor: pointer;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/google4_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div>
+                                 </a>
+                              </div>
+                              <div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 98px; position: absolute; left: 45px; top: 5px;">
+                                 <div style="padding: 0px 0px 10px; font-size: 16px;">地图数据</div>
+                                 <div style="font-size: 13px;">地图数据 ©2016 GS(2011)6020 Google</div>
+                                 <div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                 <img src="https://maps.gstatic.com/mapfiles/transparent.png" draggable="false" style="width: 37px; height: 37px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; position: absolute; right: 0px; top: 0px; z-index: 10001; cursor: pointer;">
+                              </div>
+                              <div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 0px; bottom: 0px; width: 12px;">
+                                 <div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; height: 14px; line-height: 14px;">
+                                    <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                                       <div style="width: 1px;"></div>
+                                       <div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div>
+                                    </div>
+                                    <div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">地图数据</a><span>地图数据 ©2016 GS(2011)6020 Google</span></div>
+                                 </div>
+                              </div>
+                              <div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;">
+                                 <div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">地图数据 ©2016 GS(2011)6020 Google</div>
+                              </div>
+                              <div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; -webkit-user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;">
+                                 <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                                    <div style="width: 1px;"></div>
+                                    <div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div>
+                                 </div>
+                                 <div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/zh-CN_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">使用条款</a></div>
+                              </div>
+                              <div style="width: 25px; height: 25px; overflow: hidden; display: none; margin: 10px 14px; position: absolute; top: 0px; right: 0px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/sv9.png" draggable="false" class="gm-fullscreen-control" style="position: absolute; left: -52px; top: -86px; width: 164px; height: 175px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div>
+                              <div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="0" controlheight="0" style="margin: 10px; -webkit-user-select: none; position: absolute; display: none; bottom: 0px; right: 0px;">
+                                 <div class="gm-svpc" controlwidth="28" controlheight="28" style="background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-radius: 2px; width: 28px; height: 28px; display: none; position: absolute;">
+                                    <div style="position: absolute; left: 1px; top: 1px;"></div>
+                                 </div>
+                              </div>
+                              <div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="0" controlheight="0" style="margin: 10px; -webkit-user-select: none; position: absolute; display: none; bottom: 26px; left: 0px;">
+                                 <div class="gmnoprint" controlwidth="28" controlheight="0" style="display: none; position: absolute;">
+                                    <div title="将地图旋转 90 度" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; cursor: pointer; background-color: rgb(255, 255, 255); display: none;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl4_hdpi.png" draggable="false" style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                    <div class="gm-tilt" style="width: 0px; height: 0px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; top: 0px; cursor: pointer; background-color: rgb(255, 255, 255);"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl4_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 170px; height: 54px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                 </div>
+                              </div>
+                              <div class="gmnoprint" style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; display: none; left: 0px; top: 0px;">
+                                 <div class="gm-style-mtc" style="float: left;">
+                                    <div draggable="false" title="显示街道地图" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 11px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; -webkit-background-clip: padding-box; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; font-weight: 500;">地图</div>
+                                    <div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: absolute; left: 0px; top: 0px; text-align: left; display: none;">
+                                       <div draggable="false" title="显示带地形的街道地图" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; direction: ltr; text-align: left; white-space: nowrap;">
+                                          <span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;">
+                                             <div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="https://maps.gstatic.com/mapfiles/mv/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div>
+                                          </span>
+                                          <label style="vertical-align: middle; cursor: pointer;">地形</label>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="gm-style-mtc" style="float: left;">
+                                    <div draggable="false" title="显示卫星图像" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 11px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; -webkit-background-clip: padding-box; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-left: 0px;">卫星图像</div>
+                                    <div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: absolute; right: 0px; top: 0px; text-align: left; display: none;">
+                                       <div draggable="false" title="显示带有街道名称的图像" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; direction: ltr; text-align: left; white-space: nowrap;">
+                                          <span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;">
+                                             <div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img src="https://maps.gstatic.com/mapfiles/mv/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div>
+                                          </span>
+                                          <label style="vertical-align: middle; cursor: pointer;">地名</label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="restaurant-description">
+                        <div class="restaurant-page-title">Description</div>
+                        <p><b></b></p>
+                        <p>Located on the Seventh Floor with sweeping views of Central Park, BG Restaurant is open daily for lunch, tea, cocktails and dinner. Visit this picturesque setting, designed by Kelly Wearstler, and enjoy irresistible dishes including our famous Gotham Salad</p>
+                        <p></p>
+                        <p>Hours</p>
+                        <p>Mon - Fri 11:30 am - 8:00 pm </p>
+                        <p>Sat 11:30 am - 7:00 pm</p>
+                        <p>Sun 11:30 am - 5:00 pm</p>
+                     </div>
+                     <div id="restaurant-hours"></div>
+                     <div id="restaurant-recommend-menu"></div>
+                     <div id="restaurant-gallery-title">
+                        <div class="restaurant-page-title">Gallery</div>
+                     </div>
+                     <div id="restaurant-gallery">
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant12.jpg&quot;, 1454)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant12.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1454"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant1.jpg&quot;, 1443)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant1.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1443"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant2.jpg&quot;, 1444)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant2.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1444"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant3.jpg&quot;, 1445)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant3.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1445"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant4.jpg&quot;, 1446)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant4.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1446"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant5.jpg&quot;, 1447)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant5.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1447"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant6.jpg&quot;, 1448)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant6.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1448"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant7.jpg&quot;, 1449)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant7.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1449"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant8.jpg&quot;, 1450)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant8.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1450"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant9.jpg&quot;, 1451)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant9.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1451"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant10.jpg&quot;, 1452)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant10.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1452"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant11.jpg&quot;, 1453)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant11.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1453"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant13.jpg&quot;, 1455)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant13.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1455"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant14.jpg&quot;, 1456)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant14.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1456"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant15.jpg&quot;, 1457)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant15.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1457"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant16.jpg&quot;, 1458)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant16.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1458"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant17.jpg&quot;, 1459)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant17.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1459"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant18.jpg&quot;, 1460)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant18.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1460"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant19.jpg&quot;, 1461)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant19.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1461"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant20.jpg&quot;, 1462)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant20.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1462"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant21.jpg&quot;, 1463)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant21.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1463"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant22.jpg&quot;, 1464)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant22.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1464"></div>
+                        </li>
+                        <li class="image-class-half " onclick="goToRestaurantPage(352, &quot;http%3A%2F%2Fgettimi.com%2Fimages%2Fbgrestaurant%2Fbgrestaurant23.jpg&quot;, 1465)">
+                           <a class="image-holder  lazy lazy-fadein " style="background: url(&quot;http://gettimi.com/images/bgrestaurant/bgrestaurant23.jpg&quot;) 100% 50% / cover no-repeat; height: 189px;"></a>
+                           <div class="image-background" style="height: 189px;"></div>
+                           <div id="image-avatar-1465"></div>
+                        </li>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div id="reserve-button" class="modern-square-button" style="background: rgb(99, 222, 154);">Reserve By Calling</div>
+         <div id="reserve-button-background"></div>
+         <div class="page cached" data-page="ask-calendar">
+            <div class="page-content">
+               <div class="one-line-prompt">                Let Timi know when to match you with your friends!               </div>
+               <div class="calendar-table">                     </div>
+            </div>
+         </div>
+         <div class="page cached toolbar-fixed" data-page="chatting-page">
+            <div class="toolbar messagebar">
+               <div class="toolbar-inner">                <textarea placeholder="Message"></textarea><a id="message-bar-button" href="#" style="color:#464748 !important;font-weight: 500;" class="link">Send</a>              </div>
+            </div>
+            <div class="page-content messages-content ">
+               <div class="messages">              </div>
+            </div>
+         </div>
+         <div class="page cached" data-page="push-notification">
+            <div class="page-content">              Please allow Push Notification so that you know when you are paired with a friend!             </div>
+         </div>
+      </div>
+   </div>
+</div>
+<script type="text/javascript" src="js/facebookConnectPlugin.js"></script>
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="js/framework7.min.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<!-- Path to your app js-->
+<!-- // <script type="text/javascript" src="js/my-app.js?n=1"></script> -->
+<script type="text/javascript" src="js/localScript.js"></script>

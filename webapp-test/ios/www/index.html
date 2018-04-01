@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- // <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>Timi</title>
+  <!-- Path to Framework7 Library CSS-->
+  <link rel="stylesheet" href="css/framework7.ios.min.css">
+  <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+  <link rel="stylesheet" href="css/jTinder.css">
+  <link rel="stylesheet" href="css/chat-bubble.css">
+  <link rel="stylesheet" href="css/rangeslider.css">
+  
+  <!-- Path to your custom app styles-->
+<!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"> -->
+<link rel="stylesheet" href="css/font-awesome-4.6.1/css/font-awesome.css">
+  
+
+<!--   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" >    
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" >  -->
+  <!-- <link rel="stylesheet" href="css/my-app.css"> -->
+  <link rel="stylesheet" href="/ios/www/css/my-app.css">
+  <link rel="stylesheet" href="css/google-font.css">
+  <link rel="stylesheet" href="css/animate.css">
+    
+  <!-- jQuery lib -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/rangeslider.js"></script>
+
+  <!-- transform2d lib -->
+  <script type="text/javascript" src="js/jquery.transform2d.js"></script>
+
+  <!-- jTinder lib -->
+  <script type="text/javascript" src="http://gettimi.com/ios/www/js/jquery.jTinder.js"></script>
+
+  <!-- jTinder initialization script -->
+  <script></script>
+  </head>
+  <body id="body-html">
+    <script>
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1692336331017767',
+          xfbml      : true,
+          version    : 'v2.6'
+        });
+        FB.getLoginStatus(function(response) {
+          if (response.status === 'connected') {
+            console.log('Logged in.');
+          }
+          else {
+            FB.login();
+          }
+        });      
+      };  
+    </script>    
+
+
+    <script type="text/javascript" src="js/facebookConnectPlugin.js"></script>
+
+
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="/ios/www/js/my-app.js"></script>
+  </body>
+</html>

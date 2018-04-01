@@ -1,0 +1,37 @@
+.bottom_phone_app_bar{
+	position:fixed; 
+	bottom:0px; 
+	width:100%; 
+	height:61px; 
+	padding-top:7px; 
+	background-color:#f7f7f7; 
+	border-top:solid 1px #efefef;
+}
+.bottom_phone_app_bar .close_icon{
+	float:left; 
+	font-size:25px; 
+	color:#999; 
+	margin-top:6px;
+}
+.bottom_phone_app_bar .logo_part{
+	float:left;
+}
+.bottom_phone_app_bar .logo_part img{
+	border-radius:10px; 
+	width:46px;
+}
+.bottom_phone_app_bar .text_part{
+	float:left; 
+	margin-top:2px;
+}
+.bottom_phone_app_bar .text_part .top_part{
+	font-size:16px;
+}
+.bottom_phone_app_bar .text_part .bottom_part{
+	font-size:12px; 
+	margin-top:2px;
+}
+.bottom_phone_app_bar .button_part{
+	float:right; 
+	margin-top:6px;
+}

@@ -1,0 +1,10 @@
+<svg class="nc-icon outline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48"><g transform="translate(0, 0)">
+<path data-cap="butt" data-color="color-2" fill="none" stroke="#444444" stroke-width="2" stroke-miterlimit="10" d="M41.9,23.3
+	C43.2,21.9,44,20,44,18c0-4.4-3.6-8-8-8c-0.9,0-1.8,0.2-2.7,0.5C31.9,6.7,28.3,4,24,4s-7.9,2.7-9.3,6.5C13.8,10.2,12.9,10,12,10
+	c-4.4,0-8,3.6-8,8c0,2,0.8,3.9,2.1,5.3" stroke-linejoin="miter" stroke-linecap="butt"></path>
+<line data-color="color-2" fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="24" y1="32" x2="26" y2="34" stroke-linejoin="miter"></line>
+<line data-color="color-2" fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="32" y1="28" x2="32" y2="26" stroke-linejoin="miter"></line>
+<line data-color="color-2" fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="14" y1="28" x2="16" y2="26" stroke-linejoin="miter"></line>
+<path fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M46,42H2v-6
+	c0-12.2,9.8-22,22-22h0c12.2,0,22,9.8,22,22V42z" stroke-linejoin="miter"></path>
+</g></svg>

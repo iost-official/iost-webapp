@@ -1,0 +1,43 @@
+#deny all
+
+RewriteEngine On
+
+RewriteCond %{HTTPS} !=on
+
+RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+
+#order deny,allow
+#deny from all
+#allow from 98.116.190.252
+#allow from 67.243.132.104
+#allow from 24.6.100.11
+
+<ifModule mod_expires.c>
+ ExpiresActive On
+ ExpiresByType image/x-icon "access plus 604800 seconds"
+ ExpiresByType image/jpeg "access plus 604800 seconds"
+ ExpiresByType image/png "access plus 604800 seconds"
+ ExpiresByType image/gif "access plus 604800 seconds"
+ ExpiresByType application/x-shockwave-flash "access plus 604800 seconds"
+ ExpiresByType text/css "access plus 604800 seconds"
+ ExpiresByType text/javascript "access plus 604800 seconds"
+ ExpiresByType application/javascript "access plus 604800 seconds"
+ ExpiresByType application/x-javascript "access plus 604800 seconds"
+</ifModule>
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www.iost\.io$ [NC]
+RewriteRule ^(.*)$ http://iost.io/$1 [R=301,L]
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+
+# otherwise forward it to index.php
+RewriteRule . index.php
+
+# prevent people visit directories(upload included)
+Options -Indexes
+
+#Error pages
+#ErrorDocument 403     /errors/403.php

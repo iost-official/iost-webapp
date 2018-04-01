@@ -1,0 +1,100 @@
+
+.notification_item {
+    position:relative;
+    margin:0px;
+    padding:5px;
+    padding-bottom:15px;
+}
+
+.red-notification {
+    /*width:350px;*/
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.red-notification .noti{
+    position: absolute;
+    margin-left:5px;
+
+}
+
+.red-notification div.noti p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    width: 300px;
+    font-size:12px;
+    color:black;
+    line-height: 18px;
+
+}
+
+
+.dropdown-bottom{
+    border-radius:0;
+    height:20px;
+    font-size:12px;
+    font-weight:bold;
+    width:auto;
+}
+
+.red-notification .noti, .red-notification .avatar   {
+    display:inline-block;
+    vertical-align: top;
+
+}
+
+.red-notification .noti span{
+    /*text-overflow: ellipsis;*/
+
+}
+
+.open .dropdown-menu{
+    display:block;
+}
+div.items{
+    border-style: none;
+}
+.red-notification .avatar img {
+    width: 40px;
+    height:40px;
+    border:3px solid #f0f0ed;
+}
+
+.red-notification div.noti p .color_blue  {
+    color: rgb(42, 191, 255);
+}
+
+.red-notification b {
+    color: rgb(42, 191, 255);
+    font-weight: normal;
+}
+
+.noti_Container {
+    position:relative;
+    border:0px; /* This is just to show you where the container ends */
+}
+.noti_bubble {
+    position:absolute;
+    right:3px;
+    top:5px;
+    line-height:14px;
+    padding-right:5px;
+    padding-left:5px;
+    background-color:#FA3939;
+    color:white;
+    font-weight:bold;
+    font-size:10px;
+    z-index:3;
+    border-radius:10px;
+}
+
+#nav_col_noti .noti_bubble{
+    margin-top:-10px; 
+    right:-5px;
+}
+
+.notification_item:hover{
+    background-color:#eeeeee;
+}
+/* End of CSS pulled from //layouts/newlayout/main.php */
