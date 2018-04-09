@@ -217,6 +217,10 @@
               <img src="/ios_assets/huobi02.png" style="width:120px;"></a>
           </div>
           <div class="logo col-lg-3 col-6">
+            <a href="https://www.bitfinex.com/" target="_blank">
+              <img src="/ios_assets/img/bitfinex.png" style="margin-top: 8px; transform: scale(1.1);"></a>
+          </div>
+          <div class="logo col-lg-3 col-6">
             <a href="https://www.okex.com/" target="_blank">
               <img src="/ios_assets/img/ok.png" style="margin-top:-5px; width:130px;"></a>
           </div>
@@ -241,6 +245,21 @@
           <div class="logo col-lg-3 col-6">
             <a href="https://otcbtc.com/" target="_blank">
               <img src="/ios_assets/img/otcbtc1.png" style="margin-top:5px;">
+            </a>
+          </div>
+          <div class="logo col-lg-3 col-6">
+            <a href="https://ddex.io/" target="_blank">
+              <img src="/ios_assets/img/ddex1.png">
+            </a>
+          </div>
+          <div class="logo col-lg-3 col-6">
+            <a href="https://www.lykke.com/" target="_blank">
+              <img src="/ios_assets/img/lykke.png" style="margin-top: -5px; width: 130px;">
+            </a>
+          </div>
+          <div class="logo col-lg-3 col-6">
+            <a href="https://www.lesfex.com/" target="_blank">
+              <img src="/ios_assets/img/lesfex.png" >
             </a>
           </div>
           <p style="width: 75%;margin: 30px auto; ">More exchanges are coming... to be updated...

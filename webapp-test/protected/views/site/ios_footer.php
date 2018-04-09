@@ -35,7 +35,7 @@
           <a href="https://medium.com/@iostoken" target="_blank"><img class="icon" src="/ios_assets/img/medium.svg"></a>
           <a href="https://bitcointalk.org/index.php?topic=2789376.0" target="_blank"><img class="icon" src="/ios_assets/img/bitcoin.svg"></a>
           <a href="https://www.youtube.com/channel/UCyyPv5TQ01kRV48drO-ivpQ" target="_blank"><img class="icon" src="/ios_assets/img/youtube.svg"></a>
-<!--           <a href="https://github.com/" target="_blank"><img class="icon" src="/ios_assets/img/github.svg"></a> -->
+          <a href="https://github.com/iost-official?tab=repositories" target="_blank"><img class="icon" src="/ios_assets/img/github.svg"></a>
 <!-- will guradually go open source starting April -->
         </div>
                 <a href="mailto:team@iost.io" style="color:#FFF;">Contact us</a>
