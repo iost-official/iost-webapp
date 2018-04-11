@@ -104,6 +104,14 @@
                     </a>                
                   </div>
                 </div>
+                <div class="col-sm-6">
+                  <div class="doc-item">
+                    <a href="https://www.youtube.com/watch?feature=youtu.be&v=bgx-Of1DPLw&app=desktop" target="_blank">
+                      <span>Crypto Beadles: Interview with Jimmy Zhong</span>
+                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>                
+                  </div>
+                </div>
           </div>
         </div>
       </div>

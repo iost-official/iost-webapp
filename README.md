@@ -1,5 +1,8 @@
-![iost](https://github.com/iost-official/iost-web/raw/master/webapp-test/ios_assets/img/logo.png)	
-# iost-web
+<p align="center">
+  <img src="./webapp-test/ios_assets/img/logo.png">
+</p>
+<br />
+
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)	
 [![YII](https://img.shields.io/badge/yii-v1.1.7-green.svg)](https://github.com/yiisoft/yii)
 
