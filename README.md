@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./webapp-test/ios_assets/img/logo-2.png">
+  <img src="./webapp-test/ios_assets/img/logo-02.png">
 </p>
 <br />
 
