@@ -113,7 +113,7 @@ return array(
         'lang' => array(
             'class' => 'application.extensions.translate.IOSTranslate',
             'dictDir' => dirname(__FILE__).'/i18n',
-            'validLang' => array('en', 'zh'),
+            'validLang' => array('en', 'zh', 'ko'),
             'lang' => 'en',
             'cookieName' => 'lang',
         ),

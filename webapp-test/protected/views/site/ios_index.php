@@ -20,12 +20,14 @@
               <div class="buttons" style="margin-top:-10px;">
                 <button type="button" style="margin-left:0px;margin-top:10px;" class="btn btn-lg btn-outline-light" onclick="window.open('https://docsend.com/view/rwgpdxx','_blank')">Primer </button>
                 <button type="button" class="btn btn-lg btn-outline-light" style="margin-top:10px;margin-left:0px;" onclick="window.open('https://docsend.com/view/ihwqcdg','_blank')">Technical White Paper </button>
+                <button type="button" class="btn btn-lg btn-outline-light" style="margin-top:10px;margin-left:0px;" onclick="window.open('https://mailchi.mp/8edc65384286/sign-up-iostoken-mailing-list','_blank')">Subscribe</button>
               </div>
               <p style="margin-top:20px;margin-bottom: 20px;">
                 <a class="comm-twitter comm-icon-g" href="https://twitter.com/iostoken" target="_blank"></a>
                 <a class="comm-telegram comm-icon-g" href="https://t.me/officialios" target="_blank"></a>
                 <a class="comm-reddit comm-icon-g" href="https://www.reddit.com/r/IOStoken" target="_blank"></a>
                 <a class="comm-medium comm-icon-g" href="https://medium.com/@iostoken" target="_blank"></a>
+                <!-- <a class="comm-subscribe" href="https://mailchi.mp/8edc65384286/sign-up-iostoken-mailing-list" target="_blank">Subscribe</a> -->
               </p>
 <!--               <p style="margin-top:0px;">
                 <a style='color:#fff;' href="https://t.me/officialios" target="_blank">Join us on Telegram for updates!</a>

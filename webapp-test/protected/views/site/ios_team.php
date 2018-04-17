@@ -3,7 +3,7 @@
   <div class="content">
     <div class="team-page page">
       <div class="content">
-        <h2 class="title">Core Team Members</h2>
+        <h2 class="title"  style="margin-top: 60px;">Core Team Members</h2>
         <p class="sub-title">
           <?= Yii::app()->lang->t('TEAM_INTRO') ?>
         </p>
@@ -170,7 +170,7 @@
             </div>
           </div> 
 
-          <div class="col-xl-4">
+          <!-- <div class="col-xl-4">
             <div class="team-member">
               <img src="/ios_assets/img/5-ruizhu.png">
               <h5>Ray Zhu</h5>
@@ -183,7 +183,7 @@
                 </span>
               </div>
             </div>
-          </div> 
+          </div>  -->
 
           <div class="col-xl-4">
             <div class="team-member">

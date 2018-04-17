@@ -9611,3 +9611,198 @@ Stack trace:
 REQUEST_URI=/.bash_history
 HTTP_REFERER=https://iost.io/
 ---
+2018/04/16 22:49:10 [error] [exception.CDbException] SQLSTATE[HY000] [2002] No such file or directory
+2018/04/16 22:49:10 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection. in /Users/zzq/Desktop/iost/iost-web/yii/framework/db/CDbConnection.php:405
+Stack trace:
+#0 /Users/zzq/Desktop/iost/iost-web/yii/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /Users/zzq/Desktop/iost/iost-web/yii/framework/db/CDbConnection.php(325): CDbConnection->setActive(true)
+#2 /Users/zzq/Desktop/iost/iost-web/yii/framework/base/CModule.php(394): CDbConnection->init()
+#3 /Users/zzq/Desktop/iost/iost-web/yii/framework/base/CApplication.php(459): CModule->getComponent('db')
+#4 /Users/zzq/Desktop/iost/iost-web/yii/framework/db/ar/CActiveRecord.php(637): CApplication->getDb()
+#5 /Users/zzq/Desktop/iost/iost-web/yii/framework/db/ar/CActiveRecord.php(2386): CActiveRecord->getDbConnection()
+#6 /Users/zzq/Desktop/iost/iost-web/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(WhitelistUsers))
+#7 /Users/zzq/Desktop/iost/iost-web/yii/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/controllers/SiteController.php(36): CActiveRecord->__construct()
+#9 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#10 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CWebApplication.php(282): CController->run('')
+#14 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#15 /Users/zzq/Desktop/iost/iost-web/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /Users/zzq/Desktop/iost/iost-web/webapp-test/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/
+HTTP_REFERER=http://localhost:8080/
+---
+2018/04/17 05:50:32 [error] [exception.Error] Error: Access to undeclared static property: Yii::$app in /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/views/site/ios_career.php:12
+Stack trace:
+#0 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CBaseController.php(126): require()
+#1 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/zzq/Desk...', Array, true)
+#2 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/zzq/Desk...', Array, true)
+#3 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(782): CController->renderPartial('ios_career', Array, true)
+#4 /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/controllers/SiteController.php(99): CController->render('ios_career', Array)
+#5 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionCareer()
+#6 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CWebApplication.php(282): CController->run('career')
+#10 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/career')
+#11 /Users/zzq/Desktop/iost/iost-web/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/zzq/Desktop/iost/iost-web/webapp-test/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/career?lang=en
+HTTP_REFERER=http://localhost:8080/career
+---
+2018/04/17 05:50:41 [error] [exception.CException] CException: Property "SiteController.language" is not defined. in /Users/zzq/Desktop/iost/iost-web/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/views/site/ios_career.php(12): CComponent->__set('language', 'en')
+#1 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CBaseController.php(126): require('/Users/zzq/Desk...')
+#2 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/zzq/Desk...', Array, true)
+#3 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/zzq/Desk...', Array, true)
+#4 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(782): CController->renderPartial('ios_career', Array, true)
+#5 /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/controllers/SiteController.php(99): CController->render('ios_career', Array)
+#6 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionCareer()
+#7 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CWebApplication.php(282): CController->run('career')
+#11 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/career')
+#12 /Users/zzq/Desktop/iost/iost-web/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/zzq/Desktop/iost/iost-web/webapp-test/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/career?lang=en
+HTTP_REFERER=http://localhost:8080/career
+---
+2018/04/17 05:50:42 [error] [exception.CException] CException: Property "SiteController.language" is not defined. in /Users/zzq/Desktop/iost/iost-web/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/views/site/ios_career.php(12): CComponent->__set('language', 'en')
+#1 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CBaseController.php(126): require('/Users/zzq/Desk...')
+#2 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/zzq/Desk...', Array, true)
+#3 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/zzq/Desk...', Array, true)
+#4 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(782): CController->renderPartial('ios_career', Array, true)
+#5 /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/controllers/SiteController.php(99): CController->render('ios_career', Array)
+#6 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionCareer()
+#7 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CWebApplication.php(282): CController->run('career')
+#11 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/career')
+#12 /Users/zzq/Desktop/iost/iost-web/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/zzq/Desktop/iost/iost-web/webapp-test/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/career?lang=en
+HTTP_REFERER=http://localhost:8080/career
+---
+2018/04/17 06:08:47 [error] [exception.CException] CException: SiteController and its behaviors do not have a method or closure named "getPreferredLanguage". in /Users/zzq/Desktop/iost/iost-web/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/views/site/ios_career.php(24): CComponent->__call('getPreferredLan...', Array)
+#1 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CBaseController.php(126): require('/Users/zzq/Desk...')
+#2 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/zzq/Desk...', Array, true)
+#3 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/zzq/Desk...', Array, true)
+#4 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(782): CController->renderPartial('ios_career', Array, true)
+#5 /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/controllers/SiteController.php(99): CController->render('ios_career', Array)
+#6 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionCareer()
+#7 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CWebApplication.php(282): CController->run('career')
+#11 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/career')
+#12 /Users/zzq/Desktop/iost/iost-web/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/zzq/Desktop/iost/iost-web/webapp-test/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/career
+---
+2018/04/17 06:08:48 [error] [exception.CException] CException: SiteController and its behaviors do not have a method or closure named "getPreferredLanguage". in /Users/zzq/Desktop/iost/iost-web/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/views/site/ios_career.php(24): CComponent->__call('getPreferredLan...', Array)
+#1 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CBaseController.php(126): require('/Users/zzq/Desk...')
+#2 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/zzq/Desk...', Array, true)
+#3 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/zzq/Desk...', Array, true)
+#4 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(782): CController->renderPartial('ios_career', Array, true)
+#5 /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/controllers/SiteController.php(99): CController->render('ios_career', Array)
+#6 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionCareer()
+#7 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CWebApplication.php(282): CController->run('career')
+#11 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/career')
+#12 /Users/zzq/Desktop/iost/iost-web/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/zzq/Desktop/iost/iost-web/webapp-test/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/career
+---
+2018/04/17 06:09:13 [error] [exception.Error] Error: Undefined class constant 'preferredLanguage' in /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/views/site/ios_career.php:24
+Stack trace:
+#0 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CBaseController.php(126): require()
+#1 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/zzq/Desk...', Array, true)
+#2 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/zzq/Desk...', Array, true)
+#3 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(782): CController->renderPartial('ios_career', Array, true)
+#4 /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/controllers/SiteController.php(99): CController->render('ios_career', Array)
+#5 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionCareer()
+#6 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CWebApplication.php(282): CController->run('career')
+#10 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/career')
+#11 /Users/zzq/Desktop/iost/iost-web/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/zzq/Desktop/iost/iost-web/webapp-test/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/career
+---
+2018/04/17 06:09:13 [error] [exception.Error] Error: Undefined class constant 'preferredLanguage' in /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/views/site/ios_career.php:24
+Stack trace:
+#0 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CBaseController.php(126): require()
+#1 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/zzq/Desk...', Array, true)
+#2 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/zzq/Desk...', Array, true)
+#3 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(782): CController->renderPartial('ios_career', Array, true)
+#4 /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/controllers/SiteController.php(99): CController->render('ios_career', Array)
+#5 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionCareer()
+#6 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CWebApplication.php(282): CController->run('career')
+#10 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/career')
+#11 /Users/zzq/Desktop/iost/iost-web/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/zzq/Desktop/iost/iost-web/webapp-test/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/career
+---
+2018/04/17 06:09:14 [error] [exception.Error] Error: Undefined class constant 'preferredLanguage' in /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/views/site/ios_career.php:24
+Stack trace:
+#0 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CBaseController.php(126): require()
+#1 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/zzq/Desk...', Array, true)
+#2 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/zzq/Desk...', Array, true)
+#3 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(782): CController->renderPartial('ios_career', Array, true)
+#4 /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/controllers/SiteController.php(99): CController->render('ios_career', Array)
+#5 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionCareer()
+#6 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CWebApplication.php(282): CController->run('career')
+#10 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/career')
+#11 /Users/zzq/Desktop/iost/iost-web/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/zzq/Desktop/iost/iost-web/webapp-test/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/career
+---
+2018/04/17 08:10:12 [error] [php] fopen(/Users/zzq/Desktop/iost/iost-web/webapp-test/protected/config/../../geoip/GeoIP.dat): failed to open stream: No such file or directory (/Users/zzq/Desktop/iost/iost-web/webapp-test/protected/extensions/geoip/GeoIP.php:418)
+Stack trace:
+#0 /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/extensions/geoip/GeoIP.php(389): GeoIP->__construct()
+#1 /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/extensions/geoip/CGeoIP.php(58): getInstance()
+#2 /Users/zzq/Desktop/iost/iost-web/yii/framework/base/CModule.php(394): CGeoIP->init()
+#3 /Users/zzq/Desktop/iost/iost-web/yii/framework/base/CModule.php(103): CWebApplication->getComponent()
+#4 /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/views/layouts/iost.php(60): CWebApplication->__get()
+#5 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CBaseController.php(126): require()
+#6 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#7 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(784): SiteController->renderFile()
+#8 /Users/zzq/Desktop/iost/iost-web/webapp-test/protected/controllers/SiteController.php(99): SiteController->render()
+#9 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionCareer()
+#10 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(286): SiteController->runAction()
+#12 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#13 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#14 /Users/zzq/Desktop/iost/iost-web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /Users/zzq/Desktop/iost/iost-web/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /Users/zzq/Desktop/iost/iost-web/webapp-test/index.php(13): CWebApplication->run()
+REQUEST_URI=/career

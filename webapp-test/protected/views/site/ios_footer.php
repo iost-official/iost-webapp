@@ -19,7 +19,7 @@
         <?php endif; ?>
 
           <div class="subscribe">
-            <form action="/" method="post" id="subscription_form">
+            <form action="https://mailchi.mp/8edc65384286/sign-up-iostoken-mailing-list" method="post" id="subscription_form">
               <input type="email" name="email" class="form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
               <div>
                 <a class="btn btn-lg btn-outline-light" onclick="$('#subscription_form').submit(); return false;">Subscribe</a>

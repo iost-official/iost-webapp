@@ -64,6 +64,7 @@ html, body {
   width: 30px;
   height: 30px;
   margin-right: 20px;
+  vertical-align: middle;
 }
 
 .comm-twitter{
@@ -78,6 +79,10 @@ html, body {
 .comm-medium{
   background: url('/ios_assets/img/medium-g.svg');
 }
+.comm-subscribe, .comm-subscribe:hover{
+  color: #FFF;
+}
+
 
 @media screen and (min-width: 991px) {
   .main-page {

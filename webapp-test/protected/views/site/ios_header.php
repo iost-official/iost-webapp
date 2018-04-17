@@ -38,11 +38,12 @@
       <li class="nav-item<?= $active == 'dev' ? ' active' : ''; ?>">
         <a class="nav-link" target="_blank" href="https://medium.com/@iostoken">Project Progress</a>
       </li>
-      <li class="nav-item dropdown hidden">
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= Yii::app()->lang->t('CURRENT_LANG') ?></a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="/<?= $active == 'home' ? '' : $active ?>?lang=en">English</a>
           <a class="dropdown-item" href="/<?= $active == 'home' ? '' : $active ?>?lang=zh">中文</a>
+          <a class="dropdown-item" href="/<?= $active == 'home' ? '' : $active ?>?lang=ko">한국어</a>
         </div>
       </li>
     </ul>
